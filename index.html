@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi Proyecto · Contacto</title>
-  <meta name="description" content="Página de contacto con formulario validado.">
+  <title>Mi Proyecto · Home</title>
+  <meta name="description" content="Página de bienvenida de Mi Proyecto.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -13,77 +13,18 @@
     <div class="contenedor cabecera__interior">
       <a class="marca" href="index.html">Mi Proyecto</a>
       <nav class="nav" aria-label="Navegación principal">
-        <a class="nav__enlace" href="#contacto">Contacto</a>
+        <a class="nav__enlace nav__enlace--activo" href="index.html" aria-current="page">Home</a>
+        <a class="nav__enlace" href="contacto.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="principal">
-    <section class="seccion" id="contacto">
-      <div class="contenedor">
-        <div class="tarjeta">
-          <h1 class="tarjeta__titulo">Contáctanos</h1>
-          <p class="tarjeta__subtitulo">Déjanos tus datos y te respondemos en un día hábil.</p>
-
-          <form id="formulario-contacto" class="formulario" novalidate>
-            <div class="formulario__fila">
-              <div class="campo">
-                <label class="campo__label" for="nombre">Nombre</label>
-                <input class="campo__control" type="text" id="nombre" name="nombre"
-                       autocomplete="given-name" required>
-                <p class="campo__error" id="error-nombre">Escribe tu nombre.</p>
-              </div>
-
-              <div class="campo">
-                <label class="campo__label" for="apellido">
-                  Apellido <span class="campo__opcional">(opcional)</span>
-                </label>
-                <input class="campo__control" type="text" id="apellido" name="apellido"
-                       autocomplete="family-name">
-              </div>
-            </div>
-
-            <div class="campo">
-              <label class="campo__label" for="email">Correo electrónico</label>
-              <input class="campo__control" type="email" id="email" name="email"
-                     autocomplete="email" placeholder="tu@correo.com" required>
-              <p class="campo__error" id="error-email">Ingresa un correo válido.</p>
-            </div>
-
-            <div class="campo">
-              <label class="campo__label" for="asunto">Asunto</label>
-              <select class="campo__control" id="asunto" name="asunto" required>
-                <option value="">Selecciona una opción…</option>
-                <option value="consulta">Consulta general</option>
-                <option value="soporte">Soporte técnico</option>
-                <option value="facturacion">Facturación</option>
-                <option value="otro">Otro</option>
-              </select>
-              <p class="campo__error" id="error-asunto">Elige un asunto.</p>
-            </div>
-
-            <div class="campo">
-              <label class="campo__label" for="mensaje">Mensaje</label>
-              <textarea class="campo__control" id="mensaje" name="mensaje" minlength="10"
-                        placeholder="Cuéntanos en qué podemos ayudarte…" required></textarea>
-              <p class="campo__error" id="error-mensaje">Escribe al menos 10 caracteres.</p>
-            </div>
-
-            <div class="campo campo--check">
-              <input class="campo__check" type="checkbox" id="privacidad" name="privacidad" required>
-              <label class="campo__check-label" for="privacidad">
-                Acepto la política de privacidad y el tratamiento de mis datos.
-              </label>
-            </div>
-            <p class="campo__error campo__error--suelto" id="error-privacidad">
-              Debes aceptar la política de privacidad.
-            </p>
-
-            <button class="boton" type="submit">Enviar mensaje</button>
-
-            <p class="aviso" id="form-aviso" role="status" aria-live="polite"></p>
-          </form>
-        </div>
+    <section class="hero">
+      <div class="contenedor hero__interior">
+        <h1 class="hero__titulo">Welcome to Mi Proyecto</h1>
+        <p class="hero__texto">Nos alegra tenerte por aquí. ¿En qué podemos ayudarte hoy?</p>
+        <a class="boton boton--hero" href="contacto.html">Contact now</a>
       </div>
     </section>
   </main>
@@ -94,6 +35,5 @@
     </div>
   </footer>
 
-  <script src="js/form.js" defer></script>
 </body>
 </html>

@@ -77,14 +77,29 @@ img {
   text-decoration: none;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav__enlace {
+  padding-block: 6px;
   color: var(--color-texto-suave);
   font-size: .9rem;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
 }
 
 .nav__enlace:hover {
   color: var(--color-acento);
+}
+
+.nav__enlace--activo {
+  color: var(--color-acento);
+  font-weight: 600;
+  border-bottom-color: var(--color-acento);
 }
 
 .pie {
@@ -133,7 +148,42 @@ img {
 }
 
 /* =========================================================
-   5. Formulario
+   5. Hero (página Home)
+   ========================================================= */
+.hero {
+  display: grid;
+  place-items: center;
+  padding-block: 96px;
+}
+
+.hero__interior {
+  text-align: center;
+  max-width: 640px;
+}
+
+.hero__titulo {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero__texto {
+  margin: 0 0 28px;
+  font-size: 1.05rem;
+  color: var(--color-texto-suave);
+}
+
+.boton--hero {
+  display: inline-block;
+  width: auto;
+  margin-top: 0;
+  padding: 12px 32px;
+  text-decoration: none;
+}
+
+/* =========================================================
+   6. Formulario
    ========================================================= */
 .formulario__fila {
   display: grid;
@@ -279,9 +329,13 @@ textarea.campo__control {
 }
 
 /* =========================================================
-   6. Responsive
+   7. Responsive
    ========================================================= */
 @media (max-width: 520px) {
+  .hero {
+    padding-block: 56px;
+  }
+
   .seccion {
     padding-block: 28px;
   }

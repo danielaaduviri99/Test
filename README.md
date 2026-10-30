@@ -1,13 +1,14 @@
 # Mi Proyecto — Plantilla básica
 
-Sitio estático de una sola página con un formulario de contacto validado.
+Sitio estático de dos páginas con menú de navegación y formulario de contacto validado.
 No usa dependencias ni requiere build: HTML, CSS y JavaScript puro.
 
 ## Estructura
 
 ```
 open/
-├── index.html          Página principal (cabecera + formulario + pie)
+├── index.html          Home: bienvenida y botón «Contact now»
+├── contacto.html       Contact: formulario de contacto validado
 ├── css/
 │   └── styles.css      Tokens de diseño, layout y estilos del formulario
 ├── js/
@@ -29,6 +30,11 @@ npx serve .
 ```
 
 Luego visita <http://localhost:8000>.
+
+## Navegación
+
+Ambas páginas comparten la cabecera con los enlaces **Home** y **Contact**.
+El enlace activo se marca con `nav__enlace--activo` y `aria-current="page"`.
 
 ## Cómo funciona el formulario
 
